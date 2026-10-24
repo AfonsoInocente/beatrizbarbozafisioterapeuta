@@ -47,19 +47,12 @@
   setupSlider(document.querySelector("[data-hero]"), ".slide", ".prev", ".next", ".hero-dots button");
   setupSlider(document.querySelector("[data-quotes]"), ".quote", ".prev", ".next");
 
-  document.querySelectorAll("form[data-mock]").forEach(function (form) {
+  document.querySelectorAll("form[data-form]").forEach(function (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       var note = form.querySelector(".form-note");
       if (note) note.classList.add("is-visible");
       form.reset();
-    });
-  });
-
-  document.querySelectorAll("[data-play]").forEach(function (play) {
-    play.addEventListener("click", function () {
-      var note = document.querySelector(".video-note");
-      if (note) note.style.display = "block";
     });
   });
 
